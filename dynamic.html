@@ -1,9 +1,19 @@
 <div id="root"></div>
 
 <script>
-  document.getElementById("root").innerHtml = `
-    <button>
-      <div>static</div>
-    </button>
-  `;
+  function render() {
+    const SELECTOR = "#root";
+    const DIV = document.querySelector(SELECTOR) ;
+    if (!DIV) {
+      alert(`Узел не найден: ${SELECTOR} `) ;
+      return;
+    }
+    DIV.innerHTML = `
+     <button>
+        <div>dynamic</div>
+      </button>
+    `;
+  }
+
+  render() ;
 </script>
